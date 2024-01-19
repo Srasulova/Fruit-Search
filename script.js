@@ -105,8 +105,10 @@ function searchHandler(e) {
 
   if (inputVal !== "") {
     showSuggestions(results, inputVal);
+    // suggestions.classList.add("suggested");
   } else {
-    suggestions.innerHTML = ""; // Clear suggestions if the input is empty
+    suggestions.innerHTML = "";
+    suggestions.classList.remove("suggested"); // Clear suggestions if the input is empty
   }
 }
 
@@ -118,14 +120,15 @@ function showSuggestions(results, inputVal) {
   results.forEach((result) => {
     const suggestedFruit = document.createElement("li");
     suggestedFruit.textContent = result;
-    suggestedFruit.classList.add("suggestedFruit");
+    suggestedFruit.classList.add("has-suggestions");
+    suggestions.classList.add("suggested");
     suggestions.appendChild(suggestedFruit);
   });
 }
 
 function useSuggestion(e) {
   // TODO
-  if (e.target.classList.contains("suggestedFruit")) {
+  if (e.target.classList.contains("has-suggestions")) {
     input.value = e.target.textContent;
     suggestions.innerHTML = "";
   }
