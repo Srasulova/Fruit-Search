@@ -5,13 +5,11 @@
 }
 
 input:focus {
-  /* TODO */
   border: 2px solid rgb(199, 28, 114);
   outline: none;
 }
 
 body {
-  /* TODO */
   background: rgb(243, 191, 252);
   background: linear-gradient(
     90deg,
@@ -23,7 +21,6 @@ body {
 }
 
 input {
-  /* TODO */
   border-radius: 20px;
   background: rgb(255, 155, 164);
   border: 1px solid rgb(233, 64, 148);
@@ -32,21 +29,18 @@ input {
 }
 
 .search-container {
-  /* TODO */
   width: 50%;
   margin: 20% auto;
 }
 .search-container input,
 .search-container .suggestions {
-  /* TODO */
   background: rgb(255, 155, 164);
   color: white;
 }
-.search-container input {
-  /* TODO */
-}
+/* .search-container input {
+
+} */
 .search-container .suggestions {
-  /* TODO */
   width: max-content;
   border-radius: 5px;
 }
@@ -56,11 +50,9 @@ ul.suggested {
 }
 
 ul li {
-  /* TODO */
   margin-bottom: 3px;
   list-style-type: none;
 }
 ul li:hover {
-  /* TODO */
   background-color: rgb(241, 89, 84);
 }

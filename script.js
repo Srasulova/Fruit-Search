@@ -93,27 +93,29 @@ const fruit = [
 //   return results;
 // }
 
+// Look for array values that match the str
 function search(str) {
   return fruit.filter((f) => f.toLowerCase().includes(str.toLowerCase()));
 }
 
+//
 function searchHandler(e) {
-  // TODO
   e.preventDefault();
-  const inputVal = input.value.trim(); // Trim to handle whitespace
+  const inputVal = input.value.trim();
   const results = search(inputVal);
 
   if (inputVal !== "") {
     showSuggestions(results, inputVal);
-    // suggestions.classList.add("suggested");
+    suggestions.classList.add("suggested");
   } else {
-    suggestions.innerHTML = "";
-    suggestions.classList.remove("suggested"); // Clear suggestions if the input is empty
+    suggestions.innerHTML = ""; // Clear suggestions if the input is empty
+    suggestions.classList.remove("suggested");
   }
 }
 
+// For each value in the results array that match the user input,
+// create a new li with the text of the result and append it to suggestions ul.
 function showSuggestions(results, inputVal) {
-  // TODO
   suggestions.innerHTML = "";
   results = search(inputVal);
 
@@ -121,13 +123,13 @@ function showSuggestions(results, inputVal) {
     const suggestedFruit = document.createElement("li");
     suggestedFruit.textContent = result;
     suggestedFruit.classList.add("has-suggestions");
-    suggestions.classList.add("suggested");
     suggestions.appendChild(suggestedFruit);
   });
 }
 
+// Once user clicks on one of the list items display it in the input field,
+// and clear the suggestions ul
 function useSuggestion(e) {
-  // TODO
   if (e.target.classList.contains("has-suggestions")) {
     input.value = e.target.textContent;
     suggestions.innerHTML = "";
