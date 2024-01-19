@@ -83,15 +83,15 @@ const fruit = [
   "Yuzu",
 ];
 
-function search(str) {
-  let results = [];
+// function search(str) {
+//   let results = [];
 
-  // TODO
-  results.push(
-    fruit.filter((f) => f.toLowerCase().includes(str.toLowerCase()))
-  );
-  return results;
-}
+//   // TODO
+//   results.push(
+//     fruit.filter((f) => f.toLowerCase().includes(str.toLowerCase()))
+//   );
+//   return results;
+// }
 
 function search(str) {
   return fruit.filter((f) => f.toLowerCase().includes(str.toLowerCase()));
