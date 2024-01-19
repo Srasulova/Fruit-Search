@@ -120,8 +120,8 @@ function showSuggestions(results, inputVal) {
   results.forEach((result) => {
     const suggestedFruit = document.createElement("li");
     suggestedFruit.textContent = result;
-    suggestedFruit.classList.add("has-suggestions");
-    suggestions.classList.add("suggested");
+    suggestedFruit.classList.add("suggested");
+    suggestions.classList.add("has-suggestions");
     suggestions.appendChild(suggestedFruit);
   });
 }
@@ -129,15 +129,16 @@ function showSuggestions(results, inputVal) {
 // Once user clicks on one of the list items display it in the input field,
 // and clear the suggestions ul
 function useSuggestion(e) {
-  if (e.target.classList.contains("has-suggestions")) {
+  if (e.target.classList.contains("suggested")) {
     input.value = e.target.textContent;
     clearSuggestions();
   }
 }
 
+// When input field is empty or the user selected a fruit
 function clearSuggestions() {
   suggestions.innerHTML = "";
-  suggestions.classList.remove("suggested");
+  suggestions.classList.remove("has-suggestions");
 }
 
 input.addEventListener("keyup", searchHandler);
