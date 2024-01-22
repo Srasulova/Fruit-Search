@@ -25,7 +25,7 @@ input {
   background: rgb(255, 155, 164);
   border: 1px solid rgb(233, 64, 148);
   width: 100%;
-  padding: 4px 10px;
+  padding: 10px 10px;
 }
 
 .search-container {
